@@ -50,4 +50,10 @@ The models performed as follows:
 - Data was fetched directly using ucimlrepo to support reproducibility and deployment standards.
 
 ## Interpertation
-- KNN and SVM (RBF Kernel) achieved the highest accuracy. However, differences in confusion matrices suggest trade-offs in false positives vs. false negatives, which are crucial in medical applications. Overall, this workflow supports model selection for future deployment.
+In evaluating eight different classification algorithms on the Breast Cancer Wisconsin dataset, K-Nearest Neighbors (k=5) emerged with the highest accuracy (97.71%), indicating strong performance in correctly identifying malignant and benign cases. Close behind were SVM with RBF kernel (96.57%) and several models clustered around the 96% mark—including Logistic Regression, Naive Bayes, and XGBoost.
+
+While Decision Tree showed the lowest accuracy (93.71%), this is unsurprising given its known tendency to overfit on small datasets. Ensemble methods like Random Forest (95.43%) and XGBoost (96.00%) demonstrated robustness, balancing complexity and predictive power.
+
+Confusion matrices reveal that all models maintained relatively low false-positive and false-negative rates, though subtle differences in misclassifications can be critical in a medical context. For instance, even a few false negatives (misclassified malignant tumors) may be clinically unacceptable, suggesting that top-performing models like KNN or SVM-RBF should be favored for deployment.
+
+These results suggest that while many models perform comparably, models like KNN and SVM (RBF) offer the best trade-off between accuracy and interpretability for this classification task.
