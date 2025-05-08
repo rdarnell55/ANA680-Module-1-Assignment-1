@@ -30,7 +30,7 @@ All models are trained and tested using the same 75/25 split and evaluated using
 - **Accuracy**
 - **Confusion Matrix**
 
-## 📊 Results Summary
+## Results Summary
 
 The models performed as follows:
 
